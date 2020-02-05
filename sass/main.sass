@@ -1,0 +1,423 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+a
+	color: #fff
+	text-decoration: none
+	&:hover
+		color: #fff
+		text-decoration: none
+body
+	padding: 0
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'BebasRegular', sans-serif
+	overflow-x: hidden
+	color: $accent
+	letter-spacing: 0.1px
+
+	.top-menu
+		background: url(../img/top-bg.jpg) repeat-x top center
+		max-height: 760px
+		height: 760px
+		background-size: cover
+		color: white
+		font-size: 30px
+		line-height: 26px
+		text-transform: uppercase
+		position: relative
+		a
+			color: #fff
+			display: block
+			font-size: 19px
+
+			text-decoration: underline
+	.top-line
+		padding: 18px 0 18px 0
+		max-height: 96px
+		color: $accent
+		background-color: rgba(0,0,0,.7)
+		top: 0
+		width: 100%
+		box-shadow: rgba(255,255,255,.18) 0 0 0 1px
+	.top-map
+		background: url(../img/map.png) no-repeat
+		padding-left: 45px
+	.logo-wrap
+		position: relative
+		width: 249px
+	.logo
+		position: absolute
+		margin-top: -20px
+		left: 25px
+	.ta-right
+		background: none
+		text-align: right
+	.header1
+		text-align: center
+		margin-top: 85px
+		text-shadow: 0 2px 0 rgba(0, 0, 0, 0.55)
+	.header-buttons
+		position: relative
+		top: 57%
+		a
+			text-decoration: none
+			display: inline-block
+
+	.button
+		padding: 14px 25px
+		background-color: $accent
+		font-size: 20px
+		height: 50px
+		&:hover
+			background-color: darken($accent, 15%)
+	.button-special
+		background: url(../img/button-camera.png) no-repeat
+		background-position: (10px,15px)
+		background-color: $accent
+		padding-left: 65px
+		max-width: 240px
+		margin-right: 20px
+		line-height: 16px
+		position: relative
+		bottom: -10px
+	nav
+		background-color: #242424
+		max-height: 76px
+		ul
+			display: flex
+			margin: 0
+			&::after
+				content: ''
+				width: 177px
+				height: 52px
+				background-size: 177px 52px
+				background: url(../img/warranty.png) no-repeat
+				position: absolute
+				margin-left: 830px
+				margin-top: 12px
+		a
+			list-style: none
+			color: #FFF
+			font-size: 20px
+			line-height: 22px
+			display: inline-block
+			padding: 27px 35px
+			&:first-child
+				background: url(../img/top-nav-1.png) no-repeat center
+				background-position: 5px 25px
+			&:nth-child(2)
+				background: url(../img/top-nav-2.png) no-repeat center
+				background-position: 5px 26px
+			&:nth-child(3)
+				background: url(../img/top-nav-3.png) no-repeat center
+				background-position: 12px 27px
+			&:nth-child(4)
+				background: url(../img/top-nav-4.png) no-repeat center
+				background-position: 5px 27px
+			&:nth-child(5)
+				background: url(../img/top-nav-5.png) no-repeat center
+				background-position: 5px 29px
+			&:nth-child(6)
+				background: url(../img/top-nav-6.png) no-repeat center
+				background-position: 15px 22px
+
+
+
+
+
+			&:hover
+				color:#fff
+				background-color: darken(#242424, 3%)
+				text-decoration: none
+		.warranty
+			margin-left: 120px
+			margin-top: 12px
+			border: 2px solid white
+			border-radius: 3px
+			max-height: 50px
+	.main-cats
+		background-color: #191919
+		color: #fff
+
+	.mc-header
+		text-align: center
+		margin-top: 69px
+		line-height: 26px
+		font-size: 40px
+		color: lighten(#888888, 20%)
+		font-weight: bold
+		font-family: "BebasRegular"
+		margin-bottom: 40px
+		&::before
+			content: ''
+			background: url(../img/mc-header-left.png) no-repeat
+			width: 50px
+			height: 20px
+			background-size: 50px 20px
+			position: absolute
+			margin-left: -230px
+			margin-top: 8px
+		&::after
+			content: ''
+			background: url(../img/mc-header-right.png) no-repeat
+			width: 50px
+			height: 20px
+			background-size: 50px 20px
+			position: absolute
+			margin-left: 175px
+			margin-top: -38px
+		.auto
+			color: #FFF
+		.holl
+			color: $accent
+	.mc-menu
+		list-style: none
+		padding: 0
+		position: relative
+		margin: 0
+
+		img
+			padding: 25px 15px
+		a
+			color: #fff
+			font-size: 20px
+			line-height: 26px
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+
+	.menu-toogle
+		height: 26px
+		margin-top: 3px
+		background-color: #212121
+		color: #fff
+		a
+			color: red
+	.menu-item-w
+		text-align: center
+		margin-right: 25px
+		display: inline-block
+		height: 161px
+		width: 155px
+		border: 1px solid #272727
+		border-radius: 3px
+		ul
+			position: absolute
+			width: 96%
+			margin: 0
+			padding: 0
+			background-color: #353535
+			margin-top: 21px
+			z-index: 10
+			display: none
+			left: 0px
+			li
+				display: inline-block
+				font-family: BebasRegular
+			a
+				padding: 10px 10px
+				font-size: 18px
+				line-height: 32px
+				text-decoration: underline
+				letter-spacing: 0.5px
+				&:hover
+					text-decoration: none
+		&:hover
+			.menu-toogle
+				color: $accent
+			background-color: #252525
+		.menu-toogle
+			&:hover
+				cursor: pointer
+			a
+				color: #fff
+				background-color: #353535
+	ul
+		list-style: none
+	.active
+		background-color: #252525
+		.menu-toogle
+			color: $accent
+	.mc-button-wrap
+		text-align: center
+		margin-top: 140px
+		margin-bottom: 50px
+		a
+			padding: 15px 45px
+	.second-section
+		background-color: #eaeaea
+	.main-description
+		font-size: 16px
+		line-height: 26px
+		font-weight: 700
+		text-align: center
+		color: #050505
+		max-width: 770px
+		margin: 0 auto
+		h2
+			margin-top: 37px
+			margin-bottom: 9px
+			padding: 0
+		&::before
+			content: ''
+			background: url(../img/second-section-left.png) no-repeat
+			width: 50px
+			height: 20px
+			background-size: 50px 20px
+			position: absolute
+			margin-left: -300px
+			margin-top: 9px
+		&::after
+			content: ''
+			background: url(../img/second-section-right.png) no-repeat
+			width: 50px
+			height: 20px
+			background-size: 50px 20px
+			position: absolute
+			margin-left: 250px
+			margin-top: -121px
+		p
+			font-family: 'roboto'
+			margin-bottom: 32px
+	.gallery
+		img
+			margin-top: 40px
+			margin-bottom: 25px
+			border-top: 8px solid #ac160a
+		background-color: #d7d7d7
+		p
+			font-size: 14px
+			color: #050505
+			font-family: 'roboto', 'sans-serif'
+			font-weight: 700
+			line-height: 20px
+			text-align: center
+			margin-bottom: 40px
+	.button-bottom
+		position: absolute
+		font-weight: 400
+		font-family: 'BebasRegular'
+		margin-top: -15px
+		padding-right: 28px
+		padding-left: 28px
+
+	.bottom-description
+		margin-top: 45px
+		h2
+			color: #050505
+			font-size: 36px
+			line-height: 26px
+		p
+			color: #050505
+			font-family: 'RobotoCondensed'
+			font-weight: 700
+			line-height: 22px
+			font-size: 16px
+			margin-top: 43px
+		img
+			position: absolute
+			bottom: 0
+	.footer
+		background-color: #2a2a2a
+		min-height: 90px
+		font-family: 'BebasRegular'
+		font-weight: 700
+		font-size: 20px
+		line-height: 24px
+		color: #fff
+		ul
+			text-align: center
+			margin-top: 30px
+			a
+				text-decoration: underline
+
+		li
+			display: inline-block
+			margin-right: 25px
+
+		p
+			margin-top: 33px
+		img
+			margin-top: 28px
+			position: absolute
+			right: 0
+@media  (max-width : 1200px)
+	.top-menu
+
+	.nav
+		ul
+			margin-right: 0px
+			margin-left: 5%
+			&::after
+				content: none
+	.mc-menu
+		width: 100%
+		left: 15%
+		.menu-item-w
+			margin-right: 90px
+	.bottom-description
+		p
+			margin-left: 60px
+	.button-bottom
+		font-size: 18px !important
+@media (max-width : 992px)
+	.ta-right
+		font-size: 25px
+	.nav
+		ul
+			a
+				font-size: 10px
+
+	.mc-menu
+		width: 100%
+		left: 25%
+
+	.button-bottom
+		font-size: 18px
+@media  (max-width : 768px)
+	.header-buttons
+		top: 20% !important
+	.ta-right
+		margin-top: -50px
+		margin-right: -10px
+	.second-section
+		h2
+			font-size: 32px
+		.main-description
+			&::after
+				margin-left: 250px
+				margin-top: -145px
+	.bottom-description
+		h2
+			margin-bottom: 40px
+			text-align: center
+		.button-bottom
+			left: 35%
+	.footer
+		ul
+			width: 100%
+			margin: 0
+			padding: 0
+		a
+			font-size: 15px
+	.mc-menu
+		width: 100%
+		left: 10%
